@@ -38,5 +38,11 @@ set directory=~/.vim_backups/
 
 let mapleader = ","
 
-map <Leader>, :NERDTreeToggle<cr>			" Toggle NERDTree file viewer plugin
-map <silent> <Leader>h :silent :noh<cr>	" Clear highlighted text from searches
+" Toggle NERDTree file viewer plugin
+map <Leader>, :NERDTreeToggle<CR>
+
+" Clear highlighted text from searches
+map <silent> <Leader>h :silent :noh<CR>	
+
+" Fuzzy File Search, install gem fuzzy_file_finder
+map <Leader>t :FuzzyFinderTextMate<CR>
