@@ -7,7 +7,7 @@
 * Fuzzy Finder Textmate
 * NERD Tree
 
-# Colors
+## Colors
 
 * Desert
 

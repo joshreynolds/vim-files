@@ -23,6 +23,8 @@ set scrolloff=3 	" Scroll 3 lines when passing border
 set ignorecase		" Ignore case for / searches
 set smartcase		" Override ignore case if search contains caps
 
+set shortmess=atI	" Use abbreviations, truncate with <, No Intro 
+
 set hlsearch		" Highlight search terms :noh clear highlighting
 set incsearch		" Highlight search terms as typed
 
