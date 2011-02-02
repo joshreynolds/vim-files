@@ -10,8 +10,8 @@ set number			" Shows line numbers
 set visualbell		" Visual bell indicator instead of sound
 set laststatus=2	" Always show status bar
 
-set tabstop=3
-set shiftwidth=3
+set tabstop=2
+set shiftwidth=2
 
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden			" Keeps buffers in memory, presists undo history for bg'd buffers
@@ -48,3 +48,7 @@ map <silent> <Leader>h :silent :noh<CR>
 
 " Fuzzy File Search, install gem fuzzy_file_finder
 map <Leader>t :FuzzyFinderTextMate<CR>
+
+" Prevent middle click from pasting text into the buffer
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
