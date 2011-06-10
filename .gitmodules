@@ -4,9 +4,9 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/fuzzyfinder_textmate"]
-	path = bundle/fuzzyfinder_textmate
-	url = https://github.com/namedpipe/fuzzyfinder_textmate.git
 [submodule "bundle/rails"]
 	path = bundle/rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git
