@@ -54,3 +54,8 @@ map <silent> <Leader>h :silent :noh<CR>
 " Prevent middle click from pasting text into the buffer
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
+
+" No Help
+map <F1> <Esc>
+imap <F1> <Esc>
+
