@@ -4,7 +4,7 @@
 
 * Ack
 * Buffer Explorer
-* Fuzzy Finder Textmate
+* Commant-T
 * NERD Tree
 
 ## Colors
@@ -15,4 +15,5 @@
 
 * ,, -- Toggle NERD Tree
 * ,h -- Clear highlighted searches
-* ,t -- Fuzzy Finder Textmate
+* ,t -- Command-T
+* ,be -- Buffer Explorer
