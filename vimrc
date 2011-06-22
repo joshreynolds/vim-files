@@ -1,7 +1,7 @@
 call pathogen#runtime_append_all_bundles() " Loads all plugins in the bundle dir 
 call pathogen#helptags()       						 " Build help tags for loaded bundles
 
-colorscheme desert
+colorscheme ir_black
 
 syntax on	    		" Syntax highlighting
 set ruler	    		" Shows line number, relative position in file on status line
