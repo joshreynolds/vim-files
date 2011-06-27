@@ -32,6 +32,10 @@ set shortmess=atI	" Use abbreviations, truncate with <, No Intro
 set hlsearch	  	" Highlight search terms :noh clear highlighting
 set incsearch	  	" Highlight search terms as typed
 
+if has("mouse")
+      set mouse=a
+endif
+
 
 filetype on
 filetype plugin on	" Load plugin for file type if any 
