@@ -34,6 +34,10 @@ set incsearch	  	" Highlight search terms as typed
 
 set wildignore+=.git,tmp/*,gems
 
+if has("mouse")
+      set mouse=a
+endif
+
 filetype on
 filetype plugin on	" Load plugin for file type if any 
 filetype indent on	" Auto ident
