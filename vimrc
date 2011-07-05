@@ -32,6 +32,7 @@ set shortmess=atI	" Use abbreviations, truncate with <, No Intro
 set hlsearch	  	" Highlight search terms :noh clear highlighting
 set incsearch	  	" Highlight search terms as typed
 
+set wildignore+=.git,tmp/*,gems
 
 filetype on
 filetype plugin on	" Load plugin for file type if any 
@@ -43,6 +44,8 @@ silent execute '!mkdir -p ~/.vim_backups'
 set backupdir=~/.vim_backups/
 set directory=~/.vim_backups/
 
+let g:CommandTMatchWindowReverse=1
+let g:CommandTMaxFiles=20000
 let mapleader = ","
 
 " Toggle NERDTree file viewer plugin
