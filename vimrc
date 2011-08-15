@@ -14,6 +14,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set cursorline    " Highlight the current line
+
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden		  	" Keeps buffers in memory, presists undo history for bg'd buffers
 set history=1000	" More command scrollback history
