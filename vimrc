@@ -1,9 +1,14 @@
 call pathogen#runtime_append_all_bundles() " Loads all plugins in the bundle dir 
 call pathogen#helptags()       						 " Build help tags for loaded bundles
 
-colorscheme desert 
-
 syntax on	    		" Syntax highlighting
+
+
+colorscheme github
+if has('gui_running')
+  set cursorline    " Highlight current line
+endif
+
 set ruler	    		" Shows line number, relative position in file on status line
 set showcmd		  	" Shows last command
 set number		  	" Shows line numbers
