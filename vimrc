@@ -5,10 +5,8 @@ syntax on	    		" Syntax highlighting
 
 
 colorscheme github
-if has('gui_running')
-  set cursorline    " Highlight current line
-endif
 
+set cursorline    " Highlight current line
 set ruler	    		" Shows line number, relative position in file on status line
 set showcmd		  	" Shows last command
 set number		  	" Shows line numbers
