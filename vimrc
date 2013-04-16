@@ -6,6 +6,7 @@ syntax on	    		" Syntax highlighting
 
 colorscheme github
 
+
 set cursorline    " Highlight current line
 set ruler	    		" Shows line number, relative position in file on status line
 set showcmd		  	" Shows last command
@@ -21,7 +22,7 @@ set expandtab
 set hidden		  	" Keeps buffers in memory, presists undo history for bg'd buffers
 set history=1000	" More command scrollback history
 
-set wildmenu		  " Show comlpetions when hitting <TAB>
+set wildmenu		  " Show completions when hitting <TAB>
 set wildmode=longest,list
 
 set title		    	" Update terminal title
@@ -36,6 +37,12 @@ set hlsearch	  	" Highlight search terms :noh clear highlighting
 set incsearch	  	" Highlight search terms as typed
 
 set wildignore+=.git,tmp/*,gems
+
+" Set status line to: filename, git branch, rvm version, line 1/X
+set statusline=%F%m%r%h%w\ 
+set statusline+=%{fugitive#statusline()}\    
+set statusline+=%{rvm#statusline()}  
+set statusline+=\ [line\ %l\/%L]          
 
 if has("mouse")
       set mouse=a
