@@ -39,7 +39,7 @@ set incsearch	  	" Highlight search terms as typed
 
 set ruler         " Show line number and column count
 
-set wildignore+=.git,tmp/*,gems,public/**,vendor/**,log/**,spec/**
+set wildignore+=.git,tmp,gems,public,vendor,log,spec
 
 " Set status line to: filename, git branch, rvm version, line 1/X
 set statusline=%F%m%r%h%w\
