@@ -1,11 +1,10 @@
 execute pathogen#infect()
 
-"syntax on	    		" Syntax highlighting
+syntax on	    		" Syntax highlighting
 
-"colorscheme railscasts
+colorscheme railscasts
 
-"set cursorline    " Highlight current line -- This causes preformance issues
-"set showcmd		  	" Shows last command
+set showcmd		  	" Shows last command
 "set number		  	" Shows line numbers
 "set visualbell		" Visual bell indicator instead of sound
 
@@ -20,8 +19,8 @@ set colorcolumn=+1          " Highlight 80 column limit
 hi ColorColumn ctermbg=234  " Light gray
 
 " http://items.sjbach.com/319/configuring-vim-right
-"set hidden		  	" NEEDED? Keeps buffers in memory, presists undo history for bg'd buffers
-"
+set hidden		  	" NEEDED? Keeps buffers in memory, presists undo history for bg'd buffers
+
 set history=1000	" More command scrollback history
 
 set wildmenu		  " Show completions when hitting <TAB>
@@ -51,9 +50,7 @@ if has("mouse")
   set mouse=a
 endif
 
-filetype on
-filetype plugin on	" Load plugin for file type if any
-filetype indent on	" Auto ident
+filetype plugin indent on
 
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
@@ -74,9 +71,6 @@ if exists('$ITERM_PROFILE')
 endif
 
 let mapleader = ","
-
-" Toggle NERDTree file viewer plugin
-map <Leader>, :NERDTreeToggle<CR>
 
 " Clear highlighted text from searches
 map <silent> <Leader>h :silent :noh<CR>
