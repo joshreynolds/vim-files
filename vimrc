@@ -1,34 +1,27 @@
-call pathogen#runtime_append_all_bundles() " Loads all plugins in the bundle dir 
-" call pathogen#helptags()       						 " Build help tags for loaded bundles
+execute pathogen#infect()
 
-syntax on	    		" Syntax highlighting
+"syntax on	    		" Syntax highlighting
 
-
-" let g:solarized_termcolors=256
-set background=dark
-
-"colorscheme solarized
-
-colorscheme railscasts
-
+"colorscheme railscasts
 
 "set cursorline    " Highlight current line -- This causes preformance issues
-set showcmd		  	" Shows last command
-set number		  	" Shows line numbers
-set visualbell		" Visual bell indicator instead of sound
+"set showcmd		  	" Shows last command
+"set number		  	" Shows line numbers
+"set visualbell		" Visual bell indicator instead of sound
+
 set laststatus=2	" Always show status bar
 set backspace=2   " Allow backspace past insert start
+set tabstop=2     " Use 2 spaces for tabs
+set shiftwidth=2  " Number of space to use for indenting
+set expandtab     " Change tabs to space in insert mode
 
-set tabstop=2
-set shiftwidth=2
-set expandtab
-
-set textwidth=80
-set colorcolumn=+1
-hi ColorColumn ctermbg=234
+set textwidth=80            " 80 column limit
+set colorcolumn=+1          " Highlight 80 column limit
+hi ColorColumn ctermbg=234  " Light gray
 
 " http://items.sjbach.com/319/configuring-vim-right
-set hidden		  	" Keeps buffers in memory, presists undo history for bg'd buffers
+"set hidden		  	" NEEDED? Keeps buffers in memory, presists undo history for bg'd buffers
+"
 set history=1000	" More command scrollback history
 
 set wildmenu		  " Show completions when hitting <TAB>
@@ -45,7 +38,9 @@ set shortmess=atI	" Use abbreviations, truncate with <, No Intro
 set hlsearch	  	" Highlight search terms :noh clear highlighting
 set incsearch	  	" Highlight search terms as typed
 
-set wildignore+=.git,tmp/*,gems
+set ruler         " Show line number and column count
+
+set wildignore+=.git,tmp/*,gems,public/**,vendor/**,log/**,spec/**
 
 " Set status line to: filename, git branch, rvm version, line 1/X
 set statusline=%F%m%r%h%w\
@@ -66,8 +61,18 @@ silent execute '!mkdir -p ~/.vim_backups'
 set backupdir=~/.vim_backups/
 set directory=~/.vim_backups/
 
-let g:CommandTMatchWindowReverse=1
-let g:CommandTMaxFiles=20000
+
+" Use different cursor for insert mode
+if exists('$ITERM_PROFILE')
+  if exists('$TMUX')
+    let &t_SI = "\<Esc>[3 q"
+    let &t_EI = "\<Esc>[0 q"
+  else
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+  endif
+endif
+
 let mapleader = ","
 
 " Toggle NERDTree file viewer plugin
@@ -79,12 +84,6 @@ map <silent> <Leader>h :silent :noh<CR>
 " Prevent middle click from pasting text into the buffer
 map <MiddleMouse> <Nop>
 imap <MiddleMouse> <Nop>
-
-" Remap split keys to save keystrokes
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " No Help
 map <F1> <Esc>
