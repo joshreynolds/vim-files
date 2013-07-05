@@ -24,9 +24,8 @@ set hidden		  	" NEEDED? Keeps buffers in memory, presists undo history for bg'd
 set history=1000	" More command scrollback history
 
 set wildmenu		  " Show completions when hitting <TAB>
-set wildmode=longest,list
+set wildmode=list:longest
 
-" set title		    	" Update terminal title
 set scrolloff=3 	" Scroll 3 lines when passing border
 
 set ignorecase		" Ignore case for / searches
@@ -58,6 +57,7 @@ silent execute '!mkdir -p ~/.vim_backups'
 set backupdir=~/.vim_backups/
 set directory=~/.vim_backups/
 
+runtime macros/matchit.vim
 
 " Use different cursor for insert mode
 if exists('$ITERM_PROFILE')
