@@ -4,6 +4,9 @@ syntax on	    		" Syntax highlighting
 
 colorscheme railscasts
 
+
+set clipboard=unnamed
+
 set showcmd		  	" Shows last command
 "set number		  	" Shows line numbers
 "set visualbell		" Visual bell indicator instead of sound
