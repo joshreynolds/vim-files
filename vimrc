@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 syntax on	    		" Syntax highlighting
 
-colorscheme railscasts
+colorscheme github
 
 
 set clipboard=unnamed
