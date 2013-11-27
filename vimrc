@@ -1,9 +1,10 @@
 execute pathogen#infect()
 
-syntax on	    		" Syntax highlighting
+" syntax on	    		" Syntax highlighting
 
-colorscheme github
-
+" colorscheme github
+colorscheme eink
+set background=light
 
 set clipboard=unnamed
 
