@@ -7,6 +7,7 @@ colorscheme eink
 set background=light
 
 set clipboard=unnamed
+set ttymouse=xterm2 " Allow mouse support under tmux
 
 set showcmd		  	" Shows last command
 "set number		  	" Shows line numbers
