@@ -50,6 +50,10 @@ set statusline=%F%m%r%h%w\
 set statusline+=%{fugitive#statusline()}\
 set statusline+=\ [line\ %l\/%L\ (%v)]
 
+set nobackup       "no backup files
+set nowritebackup  "only in case you don't want a backup file while editing
+set noswapfile     "no swap files
+
 if has("mouse")
   set mouse=a
 endif
@@ -58,9 +62,9 @@ filetype plugin indent on
 
 " Use a common directory for backups and swp files
 " Create it if it doesn't exist
-silent execute '!mkdir -p ~/.vim_backups'
-set backupdir=~/.vim_backups/
-set directory=~/.vim_backups/
+"silent execute '!mkdir -p ~/.vim_backups'
+"set backupdir=~/.vim_backups/
+"set directory=~/.vim_backups/
 
 runtime macros/matchit.vim
 
