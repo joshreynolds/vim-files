@@ -1,3 +1,5 @@
+set shell=/bin/sh " Prevent error when running under fish shell
+
 execute pathogen#infect()
 
 " syntax on	    		" Syntax highlighting
